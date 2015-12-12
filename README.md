@@ -7,5 +7,7 @@ Please note that this code isn't very robust, and the threshold values in getCol
 
 prac.m is the main script and you'll want to have a look at it first.
 
+The project images can be found in the issues tab. The last image "rvf.jpg" is the image used in this project and you will have to download it.
+
 Salman Maqbool
 salmanmaq@gmail.com
