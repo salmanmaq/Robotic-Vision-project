@@ -1,0 +1,20 @@
+function [binaryImage,chroma] = getColor(im,color)
+
+%Segregating the layers
+R = im(:,:,1);
+G = im(:,:,2);
+B = im(:,:,3);
+
+Y = R + G + B;
+
+%Obtaining the chromaticity coordinates and the desired binary images
+if (strcmp(color,'Red') || strcmp(color,'red') || strcmp(color,'R') || strcmp(color,'r'))
+chroma = R ./ Y;
+binaryImage = chroma > 0.42;
+elseif (strcmp(color,'Blue') || strcmp(color,'blue') || strcmp(color,'B') || strcmp(color,'b'))
+chroma = B ./ Y;
+binaryImage = chroma > 0.46;
+elseif (strcmp(color,'Green	') || strcmp(color,'green') || strcmp(color,'G') || strcmp(color,'g'))
+chroma = G ./ Y;
+binaryImage = chroma > 0.48;
+end
